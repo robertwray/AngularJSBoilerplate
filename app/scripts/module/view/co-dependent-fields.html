@@ -1,0 +1,11 @@
+<form name="codepfields">
+    Field 1: <input name="input1" ng-model="vm.data.input1" ng-required="vm.data.input2 != ''">
+    <br />
+    Field 2: <input name="input2" ng-model="vm.data.input2" ng-required="vm.data.input1 != ''">
+    <br />
+    Valid: {{codepfields.$valid}}
+    <br />
+    Input1: '{{vm.data.input1}}'
+    <br />
+    Input2: '{{vm.data.input2}}'
+</form>
