@@ -4,37 +4,14 @@
         <title>Page Title</title>
         <script src="scripts/angularjs/angular.js" type="text/javascript"></script>
         <script src="scripts/module/app.js" type="text/javascript"></script>
+        <script src="scripts/module/directive/main-control.js" type="text/javascript"></script>
+        <script src="scripts/module/directive/custom-button.js" type="text/javascript"></script>
+        <script src="scripts/module/service/math.js" type="text/javascript"></script>
     </head>
     <body>
         <div id="applicationContainer" ng-cloak="" ng-app="angularjsboilerplate">
-            <div ng-controller="MainCtrl as main">
-                {{ main.text }}
-                <input type="text" ng-model="main.myModel.value" placeholder="Start typing..." />
-                <p>Model data: {{ main.myModel.value }}</p>
-                <a custom-button ng-click="main.clearModel()">Click me</a>
-            </div>
+            <main-control>
+            </main-control>
         </div>
     </body>
 </html>
-
-<!-- I've got to here: https://toddmotto.com/ultimate-guide-to-learning-angular-js-in-one-day/#declarative-dom-methods -->
-
-
-<!-- <div >
-                <input type="number" id="firstInput" ng-model="InputValue1" ng-required="InputValue2 > 0" />
-                <br />
-                <input type="number" id="firstInput" ng-model="InputValue2" required  />
-                <br />
-                <span>
-                    Total: {{InputValue1 + InputValue2}}
-                </span>
-                <br />
-                <span>
-                    
-                </span>
-                <br />
-                <input type="submit" ng-style="InputValue1 > 1 ? {'color' : 'green'} : {'color' : 'red'}" value="Check!" ng-click="$ctrl.clickety();" />
-                <button ng-click="alert('hdw')">
-                    Clickety!
-                </button>
-            </div> -->
