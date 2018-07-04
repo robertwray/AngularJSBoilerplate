@@ -1,0 +1,13 @@
+{
+    "name": "angularjs-boilerplate",
+    "version": "1.0.0",
+    "private": true,
+    "devDependencies": {
+        "gulp": "^4.0.0",
+        "gulp-cli": "2.0.1",
+        "gulp-server-io": "^1.4.0-beta.1"
+    },
+    "dependencies": {
+        "angular": "^1.6.9"
+    }
+}
