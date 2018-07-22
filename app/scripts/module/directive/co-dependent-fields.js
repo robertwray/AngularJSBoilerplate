@@ -9,20 +9,24 @@ app.directive('coDependentFields', function()
         controller: ['Math', function (Math)
         {
             this.data = {};
-            this.data.input1 = '1';
+            this.data.input1 = '3';
             this.data.input2 = '2';
-            this.text = 'Hello, world! ' + Math.add(3, 2).toString();
-            this.myModel = 
+
+            this.data.requiredCheck = function()
             {
-                value: 'Starting value'
-            };
-        
-            this.clearModel = function()
-            {
-                alert(this.myModel.value);
-                this.myModel.value = '';
-            };
-        }], // we'll instantiate this controller "as" the above name
+                var field1Set = this.input1 != '' && this.input1 != "";
+                var field2Set = this.input2 != '' && this.input2 != "";
+                
+                if ((!field1Set && !field2Set) || (field1Set && field2Set)) 
+                {
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
+            }
+        }],
         link: function () {}
     };
 });

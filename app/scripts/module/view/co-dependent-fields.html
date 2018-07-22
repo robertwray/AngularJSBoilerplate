@@ -1,7 +1,7 @@
 <form name="codepfields" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
-    Field 1: <input name="input1" ng-model="vm.data.input1" ng-required="vm.data.input2 != '' && vm.data.input2 != undefined">
+    Field 1: <input name="input1" ng-model="vm.data.input1" ng-required="vm.data.requiredCheck()">
     <br />
-    Field 2: <input name="input2" ng-model="vm.data.input2" ng-required="vm.data.input1 != '' && vm.data.input1 != undefined">
+    Field 2: <input name="input2" ng-model="vm.data.input2" ng-required="vm.data.requiredCheck()">
     <br />
     <button ng-style="codepfields.$valid ? {'color': 'green'} :{'color': 'red'}" 
             ng-disabled="!codepfields.$valid">Clickety!</button>
